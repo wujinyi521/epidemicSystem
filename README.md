@@ -1,2 +1,0 @@
-# epidemicSystem
-武汉工商学院科技创新月项目疫情检测系统demo
