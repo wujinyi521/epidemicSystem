@@ -1,0 +1,109 @@
+1.疫情情况回溯 epidemicSituationBacktracking 按姓名查询，删除
+​通信记录ID ID		
+
+通行人员姓名 
+
+name		通行人员电话 tel
+​		通行口 gate
+​		通行设备编号 accessNumber
+​		口罩  状态：戴口罩 未知 已戴 mask
+​		体温 temperature(与临时变量temp区分)
+​		通行时间 passingTime
+2.通行人员管理：passingPersonsManagement 添加，删除，修改，按姓名查询
+
+通行人员表：同上
+			  ID    （主键）
+	<td>姓名</td> name
+	<td>类型</td>  例：员工  普通 type 
+    <td>通行权限</td> permission
+    <td>电话</td> tel
+    <td>状态</td>  status
+    <td>口罩</td>  状态：戴口罩 未知 已戴 mask
+    <td>体温</td> temperature(与临时变量temp区分)
+    <td>注册时间</td> regtime（注册时间）
+ 例：
+	<td >张三</td>
+	<td>员工</td>tai
+	<td>员工通行权限</td>
+	<td>12345678932</td>
+	<td style="color: green;">启用</td>
+	<td>是</td>
+	<td>36.5</td>
+	<td>2020-01-25 12:25:36</td>
+3.测温设备管理	略
+	不考虑
+
+4.用户管理 userManagement 添加，修改，删除,按姓名查询
+	ID主键
+
+姓名 name
+	类型名称  员工 员工一类 typeName
+	说明 explanation
+	状态   status
+	创建时间 regtime
+5.权限分组：rightsGroup 修改（类型，说明，状态）
+
+ID主键
+
+​	权限名称 员工通行权限 权限一类 permissions 
+​	说明 explanation
+​	类型 type
+​	通行设备 equipment
+​	状态 启用 禁用 status
+​	创建时间 regtime
+6.预警规则 warningRules 预设规则：温度预警
+
+ID 主键
+
+​	名称 ruleName 
+​	设备类型 deviceType
+​	等级 level
+
+​	表达式 expression
+
+​	规则说明 ruleExplanation
+​	状态 status
+7.预警设置 earlyWarningSetting 增删改
+
+设置ID ID主键
+
+​	设备编码EID  (Equipment ID)
+​	设备名称 deviceName
+​	联动条件 linkageConditions
+​	说明 explanation
+
+
+​	
+
+8.预警记录 warningRecord 显示
+
+	<td>编号</td> ID 主键
+	<td>设备类型</td> (deviceType)
+	<td>设备名称</td> (deviceName)
+	<td>空间</td> (space)
+	<td>楼栋</td> (buildingNumber)（楼栋号）
+	<td>单元</td> (unit)
+	<td>楼层</td> (floor)
+	<td>状态</td> (status)
+	<td>报警时间</td> (warningTime)
+
+例：
+	<td>001</td>
+	<td>人脸识别</td>
+	<td>测温门禁机</td>
+	<td>D区</td>
+	<td>D01栋</td>
+	<td>1单元</td>
+	<td>1层</td>
+	
+
+	<td style="color: green;">已处理</td>	
+	<td>2020-04-25 10:25</td>
+
+9.用户登录数据库
+
+用户名 username
+
+密码 password
+
+![](C:\Users\WJY\AppData\Roaming\Typora\typora-user-images\image-20200701161059989.png)

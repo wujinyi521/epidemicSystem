@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>监测温度</title>
+	<meta charset="utf-8" />
+	 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+    <script src="bootstrap/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <style type="text/css">
+    	*{
+    		margin: 0;
+    		padding: 0;
+    		list-style: none;
+    		text-decoration: none;
+    		overflow: hidden;
+    	}
+    	#header{
+    		width: 100%;
+    		background: #333;
+    		height: 70px;
+    		color: white;
+    	}
+    	#header h2{
+    		font-size: 22px;
+    		margin-bottom:10px ;
+    	}
+    	#header #header_left li{
+    		width: 90px;
+    		margin-left: 20px;
+    		padding-top: 15px;
+    	}
+    	#header #header_left li a{
+    		line-height: 40px;
+    		color: white;
+    		text-decoration: none;
+    	}
+    	#header img{
+    		width: 30px;
+    	}
+		
+    	#header #header_right li:first-child{
+    		
+    		margin-left:8px;
+			margin-right:20px;
+    		padding-top: 25px;
+    	}
+    	#header #header_right li+li{
+    		width: 90px;
+    		margin-left:10px;
+    		padding-top: 23px;
+    	}
+    	#header #header_right li a{
+    		color: white;
+    		text-decoration: none;
+    	}
+    	#img img{
+    		width: 100%;
+    		
+    	}
+	
+
+    </style>
+</head>
+<body>
+	<!--导航栏 start-->
+	<div id="header" class="box">
+		<div class="col-md-9">
+			<div class="col-md-2">
+				<h2> 天工标准版</h2>
+			</div>
+			<div class="col-md-10">
+				<ul id="header_left" class="nav navbar-nav">
+					<li>
+						<div> 
+							<img src="images/home.png" align="top" >
+							<a href="#">疫情回溯</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/list.png" align="top" >
+							<a href="Traffic_personnel_management.html">通行管理</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/list.png" align="top" >
+							<a href="#">用户管理</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/list.png" align="top" >
+							<a href="#">权限分组</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/list.png" align="top" >
+							<a href="#">预警规则</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/setting.png" align="top">
+							<a href="#">预警设置</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="images/setting.png" align="top">
+							<a href="#">预警记录</a>
+						</div>
+					</li>
+				</ul>
+			</div>	
+			
+		</div>
+		
+		<div class="col-md-3" >
+			<ul id="header_right" class="nav navbar-nav">
+				<li>用户：</li>
+				<li>12345678911</li>
+				<li>
+					<div>
+						<img src="images/exit.png"  >
+						<a href="#">退出</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--导航栏 end-->
+	
+<!--内容主体 start-->
+	
+	<div id="traffic" style="background: #eee;opacity: 0.8; padding-top: 20px;">
+		
+
+	
+	<div id="add_item" style="width: 520px;margin: 10px auto;">
+		<div>
+			<span style="font-size: 18px;font-weight:bolder;">通行人员信息修改</span>
+		</div>
+		<div id="add_form" style="margin-top: 15px;">
+			<form class="form-horizontal" action="#" method="post" style="margin-left: 20px;">
+				<div class="form-group">
+					 <label  class="control-label col-sm-2">姓名</label>
+					 <div class="col-sm-10">
+					 	<input type="text" class="form-control " placeholder="请输入姓名" name="" />
+					 </div>
+					
+				</div>
+				<div class="form-group">
+					<label  class="control-label col-sm-2">类型</label>
+					 <div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="请选择类型" name="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label  class="control-label col-sm-2">通行权限</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control"  placeholder="请输入通行权限" name="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label  class="control-label col-sm-2">电话</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control"  placeholder="请输入电话" name="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label  class="control-label col-sm-2">状态</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="请输入状态" name="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label  class="control-label col-sm-2">口罩</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="是否戴口罩" name="" />
+					</div>
+				</div>
+				<div class="form-group">
+						<label  class="control-label col-sm-2">温度</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="请输入温度" name="" />
+					</div>
+				</div>
+		
+				<div class="form-group">
+						<label  class="control-label col-sm-2">注册时间</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="请输入时间" name="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div style="float: right; margin-right: 50px; margin-top: 10px;">
+						<button type="submit" class="btn btn-info" style="width: 120px;">保存</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	
+<!--内容主体 end-->
+	
+	
+	
+</body>
+</html>
